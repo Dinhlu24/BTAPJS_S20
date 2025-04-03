@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let q = 5,
+        cnt = 0;
+      for (let i = 1; i <= q; i++) {
+        let n = +prompt("Mời nhập vào số nguyên thứ " + i + ":");
+        if (n % 2 !== 0 && !Number.isNaN(n)) {
+          cnt++;
+        }
+      }
+      console.log(cnt);
+    </script>
+  </body>
+</html>

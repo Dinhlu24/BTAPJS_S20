@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = +prompt("Nhập vào số lượng số nguyên tố cần in: ");
+
+      if (n < 1 || Number.isNaN(n)) {
+        console.error("Không hợp lệ");
+      } else {
+        let ans = "";
+        let count = 0;
+        let num = 2;
+
+        while (count < n) {
+          let isPrime = true;
+
+          for (let j = 2; j <= Math.sqrt(num); j++) {
+            if (num % j === 0) {
+              isPrime = false;
+              break;
+            }
+          }
+
+          if (isPrime) {
+            ans += num + " ";
+            count++;
+          }
+
+          num++;
+        }
+
+        console.log(ans);
+      }
+    </script>
+  </body>
+</html>
